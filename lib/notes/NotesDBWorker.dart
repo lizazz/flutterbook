@@ -62,8 +62,6 @@ class NotesDBWorker
       "Select MAX(id) + 1 as id FROM notes"
     );
       Map note = val.first;
-      print('note');
-      print( note["id"]);
       int id =  note["id"];
 
       if (id == null) {
@@ -90,7 +88,6 @@ class NotesDBWorker
     var recs = await db.query("notes");
     var list = recs.isNotEmpty ?
         recs.map((m) => noteFromMap(m)).toList() : [];
-    print(list);
     return list;
   }
 

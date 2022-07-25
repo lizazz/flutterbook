@@ -6,8 +6,6 @@ import 'NotesModel.dart' show Note, NotesModel, notesModel;
 
 class NotesList extends StatelessWidget
 {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
   Widget build(BuildContext inContext)
   {
     return ScopedModel<NotesModel>(
@@ -16,7 +14,6 @@ class NotesList extends StatelessWidget
             builder: (BuildContext inContext, Widget inChild, NotesModel inModel)
             {
               return Scaffold(
-                  key: _scaffoldKey,
                 floatingActionButton: FloatingActionButton(
                   child: Icon(Icons.add, color: Colors.white),
                   onPressed: (){

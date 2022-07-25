@@ -64,7 +64,6 @@ class NotesEntry extends StatelessWidget
                                 if (inValue == null || inValue.isEmpty) {
                                   return "Please enter a title";
                                 }
-                                print('ok');
                                 return null;
                               },
                             ),
@@ -78,10 +77,9 @@ class NotesEntry extends StatelessWidget
                               controller: _contentEditingController,
                               validator: (String? inValue) {
                                 if (inValue == null || inValue.isEmpty) {
-                                  print("Please enter content");
                                   return "Please enter content";
                                 }
-print('ok');
+
                                 return null;
                               },
                             ),

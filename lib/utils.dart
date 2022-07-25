@@ -13,7 +13,8 @@ Future selectDate(
 ) async {
   DateTime? initialDate = DateTime.now();
 
-  if (inDateString != null) {
+  if (inDateString != null && inDateString.isNotEmpty) {
+    print(inDateString);
     List dateParts = inDateString.split(",");
     initialDate = DateTime(
       int.parse(dateParts[0]),
