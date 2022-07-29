@@ -37,7 +37,7 @@ class FlutterBook extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home: DefaultTabController(
-          length: 3,
+          length: 4,
         child: Scaffold(
           appBar: AppBar(
             title: const Text("FlutterBook"),
@@ -47,10 +47,10 @@ class FlutterBook extends StatelessWidget {
                   icon: Icon(Icons.date_range),
                   text: "Appointments",
                 ),
-                // Tab(
-                //   icon: Icon(Icons.contacts),
-                //   text: "Contacts",
-                // ),
+                Tab(
+                  icon: Icon(Icons.contacts),
+                  text: "Contacts",
+                ),
                 Tab(
                   icon: Icon(Icons.note),
                   text: "Notes",
@@ -65,7 +65,7 @@ class FlutterBook extends StatelessWidget {
           body: TabBarView(
             children: [
               Appointments(),
-              // Contacts(),
+              Contacts(),
               Notes(),
               Tasks()
             ],
